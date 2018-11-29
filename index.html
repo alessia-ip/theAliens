@@ -802,8 +802,7 @@ loose, so the Plumies can go home in safety instead of on into the sun
 
 			<p>At 03 hours 40 minutes ship time, all the men but one drew back. They went inside the <em>Niccola</em>. Only one man remained, cutting at the last sliver of metal that held the two ships together.</p>
 
-			<p>It parted. The Plumie ship swept swiftly away, moved by the centrifugal force of the rotary motion the joined vessels had possessed. It dwindled and dwindled. It was a half mile away. A mile. The last man on the outside of the <em>Niccola&#8217;s</em> hull thriftily
-				 brought his torch to the air lock and came in.</p>
+			<p>It parted. The Plumie ship swept swiftly away, moved by the centrifugal force of the rotary motion the joined vessels had possessed. It dwindled and dwindled. It was a half mile away. A mile. The last man on the outside of the <em>Niccola&#8217;s</em> hull thriftily brought his torch to the air lock and came in.</p>
 
 			<p>Suddenly, the distant golden hull came to life. It steadied. It ceased to spin, however slowly. It darted ahead. It checked. It swung to the right and left and up and down. It was alive again.</p>
 
@@ -866,7 +865,30 @@ matter, we could rebuild the <i>Niccola</i>! I&#8217;ll notify the ship&#8217;s 
 		<div class="piece glow noclick"></div>
 	</div>
 
+	<script>
+		var yes = false;
+		if (yes == false) {
+			document.onclick = function (argument) {
+				var conf = confirm("Fullscreen mode?");
+				var docelem = document.documentElement;
 
+				if (conf == true) {
+					if (docelem.requestFullscreen) {
+						docelem.requestFullscreen();
+					} else if (docelem.mozRequestFullScreen) {
+						docelem.mozRequestFullScreen();
+					} else if (docelem.webkitRequestFullScreen) {
+						docelem.webkitRequestFullScreen();
+					} else if (docelem.msRequestFullscreen) {
+						docelem.msRequestFullscreen();
+					}
+					yes = true;
+					
+				}
+			}
+		}
+		//https://stackoverflow.com/questions/25980431/how-to-change-to-fullscreen-the-entire-webpage-with-confirm
+	</script>
 
 </body>
 
